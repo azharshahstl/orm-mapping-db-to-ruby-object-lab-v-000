@@ -42,6 +42,7 @@ class Student
   end
   
   def self.students_below_12th_grade 
+    binding.pry
     sql = <<-SQL
     SELECT * FROM students
     WHERE grade < 12
