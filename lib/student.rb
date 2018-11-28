@@ -44,11 +44,11 @@ class Student
   def self.students_below_12th_grade 
     sql = <<-SQL
     SELECT * FROM students
-    WHERE NOT grade = 12
+    WHERE grade = 9 OR grade = 10 OR grade = 11
     SQL
     
     DB[:conn].execute(sql)
-   end 
+  end 
     
   def save
     sql = <<-SQL
